@@ -5,7 +5,7 @@ export type TagPropType = {
 const Tag = (props:TagPropType ) => {
     return (
         <button onClick={()=>props.onClick()}>
-            <p>{props.title}</p>
+            <p className="subheading2">{props.title}</p>
         </button>
     )
 }

@@ -3,7 +3,7 @@ export type DotPropType = {
 }
 const Dot = (props:DotPropType ) => {
     return (
-        <button className="h-2 aspect-square rounded-full bg-black" onClick={()=>props.onClick()}>
+        <button className="h-[10px] opacity-[.17] aspect-square rounded-full bg-black" onClick={()=>props.onClick()}>
             
         </button>
     )

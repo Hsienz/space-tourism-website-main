@@ -13,7 +13,7 @@
   }
   h3,
 .heading3 {
-    @apply font-Bellefair text-[56px];
+    @apply font-Bellefair xl:text-[56px] xl:leading-[64px] md:text-[40px] md:leading-[46px] text-[24px] leading-[27.5px];
   }
   h4,
 .heading4 {
@@ -27,12 +27,15 @@
     @apply font-Barlow xl:text-[18px] xl:leading-[32px] md:text-[16px] md:leading-[28px] text-[15px] leading-[25px] tracking-[1.25px];
   }
   .subheading1 {
-    @apply font-Bellefair xl:text-[28px] md:text-[20px] text-[16px] xl:leading-[33.6px] xl:tracking-[4.72px] md:leading-[24px] md:tracking-[3.38px] leading-[19.2px] tracking-[2.7px];
+    @apply font-Bellefair text-[28px] leading-[32px];
   }
   .subheading2 {
     @apply font-Barlow font-[14px] tracking-[2.35px];
   }
   .navText {
     @apply font-Barlow font-[16px] tracking-[2.7px];
+  }
+  .background {
+    @apply absolute top-0 left-0 w-screen min-h-screen bg-no-repeat bg-cover -z-10;
   }
 }/*# sourceMappingURL=index.css.map */

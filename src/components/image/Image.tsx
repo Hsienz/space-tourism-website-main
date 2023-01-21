@@ -12,8 +12,8 @@ const getAsset = ( s: string ) => {
 
 const Image = (props:ImagePropType) => {
     return (
-        <div>
-            <img src={props.src} alt="" />
+        <div className="h-full">
+            <img className="h-full" src={props.src} alt="" />
         </div>
     )
 }

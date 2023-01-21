@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Header, Home, Crew, Destination, Technology } from "./components";
-import data from './data/data.json'
-const Pages: React.ReactElement[] = [
-	<Home />,
-	<Destination destinations={data.destinations}/>,
-	<Crew crew={data.crew}/>,
-	<Technology technology={data.technology}/>,
-];
+import data from "./data/data.json";
 function App() {
 	const [page, setPage] = useState(0);
+	const Pages: React.ReactElement[] = [
+		<Home onClick={() => setPage(1)} />,
+		<Destination destinations={data.destinations} />,
+		<Crew crew={data.crew} />,
+		<Technology technology={data.technology} />,
+	];
 	return (
-		<div className="text-purple">
-      <Header />
+		<div className="text-purple w-screen min-h-screen text-center">
+			<Header setIndex={setPage} />
 			{Pages[page]}
 		</div>
 	);

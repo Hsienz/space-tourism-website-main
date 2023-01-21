@@ -6,9 +6,9 @@ type InstructionPropType = {
 const Instruction = ( props:InstructionPropType ) => {
     return (
         <div>
-            <h3>{props.crew.role}</h3>
-            <h2>{props.crew.name}</h2>
-            <p>{props.crew.bio}</p>
+            <h4 className="uppercase">{props.crew.role}</h4>
+            <h5 className="uppercase mt-[8px]">{props.crew.name}</h5>
+            <p className="mt-[16px]">{props.crew.bio}</p>
         </div>
     )
 }
