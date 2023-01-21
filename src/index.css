@@ -1,3 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
 @tailwind base;
 @tailwind components;
-@tailwind utilities;/*# sourceMappingURL=index.css.map */
+@tailwind utilities;
+@layer components {
+  h1,
+.heading1 {
+    @apply font-Bellefair text-[80px] leading-[100px] md:text-[150px] md:leading-[150px];
+  }
+  h2,
+.heading2 {
+    @apply font-Bellefair text-[100px];
+  }
+  h3,
+.heading3 {
+    @apply font-Bellefair text-[56px];
+  }
+  h4,
+.heading4 {
+    @apply font-Bellefair md:text-[32px] md:leading-[36.67px] md:tracking-[2px] text-[20px] leading-[22.92px] tracking-[1.25px];
+  }
+  h5,
+.heading6 {
+    @apply font-Barlow text-[28px] tracking-[4.75px];
+  }
+  p {
+    @apply font-Barlow xl:text-[18px] xl:leading-[32px] md:text-[16px] md:leading-[28px] text-[15px] leading-[25px] tracking-[1.25px];
+  }
+  .subheading1 {
+    @apply font-Bellefair xl:text-[28px] md:text-[20px] text-[16px] xl:leading-[33.6px] xl:tracking-[4.72px] md:leading-[24px] md:tracking-[3.38px] leading-[19.2px] tracking-[2.7px];
+  }
+  .subheading2 {
+    @apply font-Barlow font-[14px] tracking-[2.35px];
+  }
+  .navText {
+    @apply font-Barlow font-[16px] tracking-[2.7px];
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar, Home, Crew, Destination, Technology } from "./components";
+import { Header, Home, Crew, Destination, Technology } from "./components";
 import data from './data/data.json'
 const Pages: React.ReactElement[] = [
 	<Home />,
@@ -10,8 +10,8 @@ const Pages: React.ReactElement[] = [
 function App() {
 	const [page, setPage] = useState(0);
 	return (
-		<div className="App">
-			<Navbar setIndex={setPage}/>
+		<div className="text-purple">
+      <Header />
 			{Pages[page]}
 		</div>
 	);

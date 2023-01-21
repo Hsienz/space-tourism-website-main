@@ -1,4 +1,4 @@
-let assets : any = import.meta.glob('/src/assets/{crew,technology,destination}/*', {eager:true})
+let assets : any = import.meta.glob('/src/assets/*/*', {eager:true})
 
 export type ImagePropType = {
     src: string,
