@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { CrewType } from "../../data/type"
 import Instruction from "./components/Instruction"
-import Dot from "../Dot/Dot"
+import Dot from "../dot/Dot"
 import Image,{getAsset} from "../image/Image"
 
 type CrewPropType = {
