@@ -12,21 +12,21 @@ export type DestinationPropType = {
 const Destination = (props: DestinationPropType) => {
 	const [index, setIndex] = useState(0);
 	return (
-		<div className="flex flex-col items-center">
+		<div className="flex flex-col items-center h-[850px] relative">
 			<div className="background bg-[url('/src/assets/destination/background-destination-mobile.jpg')] md:bg-[url('/src/assets/destination/background-destination-tablet.jpg')] xl:bg-[url('/src/assets/destination/background-destination-desktop.jpg')]"></div>
 			<div>
 				{" "}
-				<div className="mt-[88px]">
+				<div className="mt-[88px] md:mt-[136px] md:ml-[38.5px]">
 					{" "}
 					<Title number="01" title="Pick your destination" />{" "}
 				</div>
-				<div className="h-[170px] aspect-square mx-auto mt-[32px]">
+				<div className="h-[170px] md:h-[300px] aspect-square mx-auto mt-[32px]">
 					{" "}
 					<Image
 						src={getAsset(props.destinations[index].images.png)}
 					/>
 				</div>
-				<div className="mt-[26px] flex gap-x-[27px] justify-center">
+				<div className="mt-[26px] flex gap-x-[27px] justify-center md:mt-[53px]">
 					{props.destinations.map((x, i) => (
 						<Tag
 							key={x.name}
@@ -35,7 +35,7 @@ const Destination = (props: DestinationPropType) => {
 						/>
 					))}
 				</div>
-				<div className="mt-[20px]">
+				<div className="mt-[20px] md:mt-[32px]">
 					{" "}
 					<Instruction destination={props.destinations[index]} />
 				</div>

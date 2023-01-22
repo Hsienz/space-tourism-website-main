@@ -10,22 +10,21 @@ const Header = (props: HeaderPropType) => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	return (
 		<div className="flex justify-between absolute z-10 w-full px-[24px] pt-[24px]">
-			<button>
+			<button onClick={()=>props.setIndex(0)}>
 				{" "}
 				<img src={icon} alt="" />
 			</button>
-			<button className="z-10" onClick={() => setToggleMenu(!toggleMenu)}>
+			<button className="z-10 md:hidden" onClick={() => setToggleMenu(!toggleMenu)}>
 				{" "}
 				<img src={toggleMenu ? iconClose : iconHamburger} alt="" />
 			</button>
-			{toggleMenu && (
-				<div className="absolute top-0 right-0 w-[254px]">
+				<div className={`absolute top-0 right-0 ${toggleMenu ? "" : "hidden"} w-[254px] h-screen md:!block md:w-[450px] md:h-[96px]`}>
 					{" "}
 					<Navbar
 						setIndex={props.setIndex}
+						close={()=>setToggleMenu(false)}
 					/>
 				</div>
-			)}
 		</div>
 	);
 };

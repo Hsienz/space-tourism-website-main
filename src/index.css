@@ -21,10 +21,10 @@
   }
   h5,
 .heading6 {
-    @apply font-Barlow text-[28px] tracking-[4.75px];
+    @apply font-Barlow xl:text-[28px] xl:tracking-[4.75px] xl:leading-[33.6px] text-[20px] leading-[24px] tracking-[3.4px];
   }
   p {
-    @apply font-Barlow xl:text-[18px] xl:leading-[32px] md:text-[16px] md:leading-[28px] text-[15px] leading-[25px] tracking-[1.25px];
+    @apply font-Barlow xl:text-[18px] xl:leading-[32px] md:text-[16px] md:leading-[28px] text-[15px] leading-[25px] tracking-[1.15px];
   }
   .subheading1 {
     @apply font-Bellefair text-[28px] leading-[32px];
@@ -36,6 +36,6 @@
     @apply font-Barlow font-[16px] tracking-[2.7px];
   }
   .background {
-    @apply absolute top-0 left-0 w-screen min-h-screen bg-no-repeat bg-cover -z-10;
+    @apply absolute top-0 left-0 w-screen h-full min-h-screen bg-no-repeat bg-cover -z-10;
   }
 }/*# sourceMappingURL=index.css.map */

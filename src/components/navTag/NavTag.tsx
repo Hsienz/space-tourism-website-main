@@ -6,7 +6,7 @@ export type NavTagPropType = {
 const NavTag = (props:NavTagPropType ) => {
     return (
         <button onClick={()=>props.onClick()}>
-            <p className="navText text-left uppercase"><span className="font-bold">{props.number}</span> {props.title}</p>
+            <p className="navText text-left uppercase"><span className="font-bold md:hidden xl:inline">{props.number}</span> {props.title}</p>
         </button>
     )
 }

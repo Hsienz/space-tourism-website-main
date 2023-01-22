@@ -4,7 +4,7 @@ export type CirclePropType = {
 }
 const Circle = (props:CirclePropType ) => {
     return (
-        <button className="h-[40px] aspect-square rounded-full bg-transparent border-white border-[1px] text-white font-Bellefair" onClick={()=>props.onClick()}>
+        <button className="h-[40px] md:h-[60px] aspect-square rounded-full bg-transparent border-white border-[1px] text-white font-Bellefair" onClick={()=>props.onClick()}>
             <p>{props.number}</p>
         </button>
     )
