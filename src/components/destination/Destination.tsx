@@ -12,32 +12,42 @@ export type DestinationPropType = {
 const Destination = (props: DestinationPropType) => {
 	const [index, setIndex] = useState(0);
 	return (
-		<div className="flex flex-col items-center h-[850px] relative">
-			<div className="background bg-[url('/src/assets/destination/background-destination-mobile.jpg')] md:bg-[url('/src/assets/destination/background-destination-tablet.jpg')] xl:bg-[url('/src/assets/destination/background-destination-desktop.jpg')]"></div>
-			<div>
-				{" "}
-				<div className="mt-[88px] md:mt-[136px] md:ml-[38.5px]">
+		<div className="flex flex-col items-center">
+			<div className="background bg-[url('/src/assets/destination/background-destination-mobile.jpg')] md:bg-[url('/src/assets/destination/background-destination-tablet.jpg')] xl:bg-[url('/src/assets/destination/background-destination-desktop.jpg')] min-h-[850px] md:background">
+				<div>
 					{" "}
-					<Title number="01" title="Pick your destination" />{" "}
-				</div>
-				<div className="h-[170px] md:h-[300px] aspect-square mx-auto mt-[32px]">
-					{" "}
-					<Image
-						src={getAsset(props.destinations[index].images.png)}
-					/>
-				</div>
-				<div className="mt-[26px] flex gap-x-[27px] justify-center md:mt-[53px]">
-					{props.destinations.map((x, i) => (
-						<Tag
-							key={x.name}
-							title={x.name}
-							onClick={() => setIndex(i)}
-						/>
-					))}
-				</div>
-				<div className="mt-[20px] md:mt-[32px]">
-					{" "}
-					<Instruction destination={props.destinations[index]} />
+					<div className="pageTitle">
+						{" "}
+						<Title number="01" title="Pick your destination" />{" "}
+					</div>
+					<div className="xl:flex">
+						<div className="h-[170px] md:h-[300px] xl:h-[450px] aspect-square mx-auto mt-[32px] xl:mt-[97px] xl:ml-[230px]">
+							{" "}
+							<Image
+								src={getAsset(
+									props.destinations[index].images.png
+								)}
+							/>
+						</div>
+						<div className="flex flex-col xl:mt-[147px] xl:ml-[157px] xl:items-start">
+							<div className="mt-[26px] flex gap-x-[27px] justify-center md:mt-[53px] xl:m-0">
+								{props.destinations.map((x, i) => (
+									<Tag
+										key={x.name}
+										title={x.name}
+										onClick={() => setIndex(i)}
+										isSelect={() => index == i}
+									/>
+								))}
+							</div>
+							<div className="mt-[20px] md:mt-[32px] xl:text-left">
+								{" "}
+								<Instruction
+									destination={props.destinations[index]}
+								/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

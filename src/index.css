@@ -36,6 +36,9 @@
     @apply font-Barlow font-[16px] tracking-[2.7px];
   }
   .background {
-    @apply absolute top-0 left-0 w-screen h-full min-h-screen bg-no-repeat bg-cover -z-10;
+    @apply absolute top-0 left-0 w-screen h-screen bg-no-repeat bg-cover min-h-[667px] md:min-h-[1024px] xl:min-h-[900px];
+  }
+  .pageTitle {
+    @apply mt-[88px] md:mt-[136px] md:ml-[38.5px] xl:mt-[212px] xl:ml-[166.5px];
   }
 }/*# sourceMappingURL=index.css.map */

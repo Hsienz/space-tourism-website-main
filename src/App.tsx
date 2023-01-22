@@ -10,8 +10,8 @@ function App() {
 		<Technology technology={data.technology} />,
 	];
 	return (
-		<div className="text-purple w-screen min-h-screen text-center">
-			<Header setIndex={setPage} />
+		<div className="text-white w-screen min-h-screen text-center xl:pt-[40px]">
+			<Header index={page} setIndex={setPage} />
 			{Pages[page]}
 		</div>
 	);
